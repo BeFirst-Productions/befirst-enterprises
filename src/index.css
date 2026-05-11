@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-release: release 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  
+  @keyframes release {
+    0% {
+      transform: translateY(100px) scaleY(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes revealUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.animate-reveal-up {
+  opacity: 0;
+  animation: revealUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-release {
+  animation: var(--animate-release);
+  transform-origin: bottom;
+}
+
+/* Scroll Reveal Classes */
+.reveal {
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-fade-up {
+  transform: translateY(50px);
+}
+
+.reveal-fade-in {
+  transform: scale(0.95);
+}
+
+.active.reveal-fade-up,
+.active.reveal-fade-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
