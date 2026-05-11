@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Container from '../Layout/Container';
-import bussiness_consultancy from "../../assets/images/services/Business_Consultancy.jpeg"
+import bussiness_consultancy from "../../assets/images/services/Business_consultancy.jpeg"
 import hr_consultancy from "../../assets/images/services/HR_Management_ Consulting.jpeg"
 import Media_Production from "../../assets/images/services/Media_Production.jpeg"
 import training from "../../assets/images/services/training.jpeg"
