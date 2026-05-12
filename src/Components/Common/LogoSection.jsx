@@ -8,50 +8,57 @@ import educationConsultingLogo from '../../assets/images/logos/educational-consu
 import eventManagementLogo from '../../assets/images/logos/event-management.png';
 import toursTravelsLogo from '../../assets/images/logos/tours-travels.png';
 import accountingAuditingLogo from '../../assets/images/logos/accounting-auditing.png';
+import mediaProduction from '../../assets/images/logos/media-production.png';
 
 
 const LogoSection = () => {
   // Update the 'src' paths here with the actual locations of your saved images
   const logos = [
-    { 
-      id: 1, 
-      alt: 'Befirst Business Consultancy', 
-      src: businessConsultingLogo 
+    {
+      id: 1,
+      alt: 'Befirst Business Consultancy',
+      src: businessConsultingLogo
     },
-    { 
-      id: 2, 
-      alt: 'Befirst Accounting & Auditing', 
-      src: accountingAuditingLogo 
+    {
+      id: 2,
+      alt: 'Befirst Accounting & Auditing',
+      src: accountingAuditingLogo
     },
-    { 
-      id: 3, 
-      alt: 'Befirst Event Management', 
-      src: eventManagementLogo 
+    {
+      id: 3,
+      alt: 'Befirst Event Management',
+      src: eventManagementLogo
     },
-    { 
-      id: 4, 
-      alt: 'Befirst E-Learning & Training', 
-      src: trainingLogo 
+    {
+      id: 4,
+      alt: 'Befirst E-Learning & Training',
+      src: trainingLogo
     },
-    { 
-      id: 5, 
-      alt: 'Befirst Media Production', 
-      src: mediaProductionLogo 
+    {
+      id: 5,
+      alt: 'Befirst Enterprises',
+      src: mediaProductionLogo
     },
-    { 
-      id: 6, 
-      alt: 'Befirst HR & Management Consultancy', 
-      src: hrConsultingLogo 
+    {
+      id: 6,
+      alt: 'Befirst HR & Management Consultancy',
+      src: hrConsultingLogo
     },
-    { 
-      id: 7, 
-      alt: 'Befirst Educational Consultancy', 
-      src: educationConsultingLogo 
+    {
+      id: 7,
+      alt: 'Befirst Educational Consultancy',
+      src: educationConsultingLogo
     },
-    { 
-      id: 8, 
-      alt: 'Befirst Tours & Travels', 
-      src: toursTravelsLogo 
+    {
+      id: 8,
+      alt: 'Befirst Tours & Travels',
+      src: toursTravelsLogo
+    }
+    ,
+    {
+      id: 9,
+      alt: 'Befirst Media Production',
+      src: mediaProduction
     }
   ];
 
@@ -59,18 +66,17 @@ const LogoSection = () => {
     <div className="bg-white py-12 md:py-24">
       <Container>
         <div className="max-w-7xl mx-auto">
-          {/* Grid: 2 columns on mobile, 4 columns on md screens and up */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {/* Grid: 1 column on mobile, 2 on sm, 3 on md screens and up */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
             {logos.map((logo) => (
-              <div 
-                key={logo.id} 
-                className="flex items-center justify-center p-6 bg-white rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.2)] transition-shadow duration-300 border border-gray-50"
+              <div
+                key={logo.id}
+                className="flex items-center justify-center h-32 md:h-38 p-6 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-500 border border-gray-50 hover:-translate-y-1"
               >
-                <img 
-                  src={logo.src} 
-                  alt={logo.alt} 
-                  // Adjust max-w to fit your exact image dimensions
-                  className="w-full max-w-[180px] h-auto object-contain" 
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="w-full h-full object-contain"
                 />
               </div>
             ))}
