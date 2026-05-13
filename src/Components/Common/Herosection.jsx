@@ -1,5 +1,7 @@
 import React from 'react';
 import Container from '../Layout/Container';
+import ShinyText from './ShinyText';
+
 
 const HeroSection = () => {
   return (
@@ -47,28 +49,51 @@ const HeroSection = () => {
         <div className=" flex flex-col items-center text-center py-20 relative z-10">
 
           {/* Typography Section */}
-          <div className="max-w-4xl mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-6 flex flex-wrap justify-center gap-x-3">
+          <div className="max-w-5xl mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.15] mb-8 flex flex-wrap justify-center gap-x-4">
               {"Empowering Businesses with Smart Consulting & Strategic Solutions".split(" ").map((word, index) => (
-                <span 
-                  key={index} 
-                  className="animate-reveal-up inline-block" 
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                <span
+                  key={index}
+                  className={`opacity-0 inline-block animate-[fadeInUpBlur_1.2s_cubic-bezier(0.2,0.8,0.2,1)_forwards]`}
+                  style={{ animationDelay: `${index * 0.12}s` }}
+                >
+                  {word === "Businesses" ? (
+                    <ShinyText
+                      text={word}
+                      speed={4}
+                      color="#7970FF"
+                      shineColor="#C7C2FF"
+                      className="font-bold"
+                    />
+
+                  ) : (
+                    word
+                  )}
+                </span>
+              ))}
+
+            </h1>
+
+            <p className="text-black text-md md:text-lg leading-relaxed max-w-4xl mx-auto flex flex-wrap justify-center gap-x-1">
+
+              {"We are Your Trusted Strategic Business Consultancy Specializing in Hr, Media Production, Education Consultancy, Events & Tourism.".split(" ").map((word, index) => (
+                <span
+                  key={index}
+                  className="opacity-0 inline-block animate-[fadeInUpBlur_1s_ease-out_forwards]"
+                  style={{ animationDelay: `${1.2 + (index * 0.05)}s` }}
                 >
                   {word}
                 </span>
               ))}
-            </h1>
-            <p className="text-black text-md md:text-lg leading-relaxed max-w-2xl mx-auto animate-reveal-up" style={{ animationDelay: '0.8s' }}>
-             We are Your Trusted Strategic Business Consultancy Specializing in Hr, Media Production, Education Consultancy, Events & Tourism.
             </p>
+
           </div>
 
           {/* Staggered Card Layout */}
           <div className="relative z-10 flex flex-wrap lg:flex-nowrap items-end justify-center gap-4 lg:gap-12 xl:gap-12 w-full">
 
             {/* Image Card 1 - High Stagger */}
-            <div 
+            <div
               className="w-64 h-80 rounded-3xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-y-75 cursor-pointer ease-out origin-bottom animate-release opacity-0"
               style={{ animationDelay: '0.1s' }}
             >
@@ -80,7 +105,7 @@ const HeroSection = () => {
             </div>
 
             {/* Stats Card - Black */}
-            <div 
+            <div
               className="hidden md:flex w-48 h-64 bg-black rounded-3xl p-8 flex-col justify-center items-center text-white shadow-xl transition-all duration-500 hover:scale-y-75 cursor-pointer ease-out origin-bottom animate-release opacity-0"
               style={{ animationDelay: '0.2s' }}
             >
@@ -91,7 +116,7 @@ const HeroSection = () => {
             </div>
 
             {/* Trusted Card */}
-            <div 
+            <div
               className="hidden md:flex w-44 h-64 bg-gradient-to-br from-[#0d0d2a] to-[#25254d] rounded-3xl p-7 flex-col justify-center gap-3 shadow-lg transform transition-all duration-500 hover:scale-y-75 cursor-pointer ease-out origin-bottom animate-release opacity-0"
               style={{ animationDelay: '0.3s' }}
             >
@@ -102,7 +127,7 @@ const HeroSection = () => {
             </div>
 
             {/* Business Growth Card */}
-            <div 
+            <div
               className="hidden lg:flex w-52 h-72 bg-gray-50 rounded-3xl p-7 flex-col justify-between shadow-md transition-all duration-500 hover:scale-y-75 cursor-pointer ease-out origin-bottom border border-slate-100 animate-release opacity-0"
               style={{ animationDelay: '0.4s' }}
             >
@@ -121,7 +146,7 @@ const HeroSection = () => {
             </div>
 
             {/* Image Card 2 - Low Stagger */}
-            <div 
+            <div
               className="hidden lg:block w-64 h-80 rounded-3xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-y-75 cursor-pointer ease-out origin-bottom animate-release opacity-0"
               style={{ animationDelay: '0.5s' }}
             >

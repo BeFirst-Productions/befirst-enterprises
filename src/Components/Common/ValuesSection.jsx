@@ -1,5 +1,7 @@
 import React from 'react';
 import Container from '../Layout/Container';
+import ShinyText from '../Common/ShinyText';
+
 
 const values = [
   {
@@ -66,16 +68,26 @@ const ValuesSection = () => {
   return (
     <section className="bg-[#1E1E4F] py-10 md:py-20">
       <Container>
-        <div className="text-center mb-16 reveal reveal-fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#DBBE77]">
-            Our Values
+        <div className="text-center mb-16">
+          <h2 className="m-0">
+            <ShinyText
+              text="Our Values"
+              disabled={false}
+              speed={4}
+              className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold"
+              color="#DBBE77"
+              shineColor="#FFF3D6"
+              direction="left"
+            />
           </h2>
         </div>
 
+
+
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group bg-white rounded-[2rem] p-6 shadow-xl border-b-8 border-[#DBBE77] flex flex-col items-start text-left hover:transform hover:-translate-y-2 transition-all duration-300 reveal reveal-fade-up"
               style={{ transitionDelay: `${index * 0.15}s` }}
             >

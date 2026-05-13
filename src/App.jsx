@@ -12,25 +12,29 @@ import WhyChooseUs from './Components/Common/WhyChooseUs'
 import LogoSection from './Components/Common/LogoSection'
 import ContactSection from './Components/Common/ContactSection'
 import Footer from './Components/Common/Footer'
+import ScrollToTop from './Components/Common/ScrollToTop'
 import useScrollReveal from './hooks/useScrollReveal'
+
 
 function App() {
   useScrollReveal();
 
   return (
-  <>
-  <Navbar/>
-  <div id="home"><HeroSection/></div>
-  <div id="about"><AboutSection/></div>
-  <div id="values"><ValuesSection/></div>
-  <div id="founder"><FounderMessage/></div>
-  <div id="services"><ServicesSection/></div>
-  <div id="why-us"><WhyChooseUs/></div>
-  <div id="logos"><LogoSection/></div>
-  <div id="contact"><ContactSection/></div>
-  <Footer/>
-  </>
+    <>
+      <Navbar />
+      <div id="home"><HeroSection /></div>
+      <div id="about"><AboutSection /></div>
+      <div id="values"><ValuesSection /></div>
+      <div id="founder"><FounderMessage /></div>
+      <div id="services"><ServicesSection /></div>
+      <div id="why-us"><WhyChooseUs /></div>
+      <div id="logos"><LogoSection /></div>
+      <div id="contact"><ContactSection /></div>
+      <Footer />
+      <ScrollToTop />
+    </>
   )
 }
+
 
 export default App

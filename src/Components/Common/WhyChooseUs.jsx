@@ -1,5 +1,7 @@
 import React from 'react';
 import Container from '../Layout/Container';
+import ShinyText from './ShinyText';
+
 
 const WhyChooseUs = () => {
   const cards = [
@@ -95,11 +97,36 @@ const WhyChooseUs = () => {
 
         {/* Content */}
         <div className="relative z-10 text-left">
-          <header className="mb-10 md:mb-16 reveal reveal-fade-up">
-            <h1 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#1E1E4B] leading-tight">
-              Why Choose<br />Befirst Enterprises
-            </h1>
+          <header className="mb-10 md:mb-16">
+            <h2 className="flex flex-col m-0">
+              <ShinyText 
+                text="Why Choose" 
+                speed={4} 
+                startDelay={0}
+                delay={3}
+                className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight" 
+                color="#1E1E4B" 
+                shineColor="#7970FF" 
+                direction="left"
+                spread={90}
+              />
+              <ShinyText 
+                text="Befirst Enterprises" 
+                speed={3} 
+                startDelay={3}
+                delay={0}
+                className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight" 
+                color="#1E1E4B" 
+                shineColor="#7970FF" 
+                direction="left"
+                spread={90}
+              />
+            </h2>
+
           </header>
+
+
+
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-6 md:gap-x-6 md:gap-y-10 max-w-7xl mx-auto">
             {cards.map((card, index) => (

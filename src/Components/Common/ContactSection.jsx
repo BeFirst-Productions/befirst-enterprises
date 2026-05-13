@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Container from '../Layout/Container';
+import ShinyText from './ShinyText';
+
 
 const WHATSAPP_NUMBER = '918086736161'; // +91 80867 36161
 
@@ -176,9 +178,18 @@ const ContactSection = () => {
         {/* Heading */}
         <div className="text-center mb-14">
           <p className="text-[#DBBE77] text-sm font-semibold uppercase tracking-[0.25em] mb-3">Get In Touch</p>
-          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white leading-tight">
-            Let's Start a Conversation
+          <h2 className="m-0">
+            <ShinyText 
+              text="Let's Start a Conversation" 
+              speed={4} 
+              className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight" 
+              color="#FFFFFF" 
+              shineColor="#DBBE77" 
+              direction="left"
+            />
           </h2>
+
+
           <p className="text-white mt-4 max-w-xl mx-auto text-sm md:text-base">
             Ready to grow your business? Reach out and our team will get back to you promptly.
           </p>

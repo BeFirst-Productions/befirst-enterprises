@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Container from '../Layout/Container';
+import ShinyText from './ShinyText';
+
 import bussiness_consultancy from "../../assets/images/services/Business_consultancy.jpeg"
 import hr_consultancy from "../../assets/images/services/HR_Management_ Consulting.jpeg"
 import Media_Production from "../../assets/images/services/Media_Production.jpeg"
@@ -172,11 +174,35 @@ const ServicesSection = () => {
   return (
     <section className="bg-[#1E1E4B] pt-10 md:pt-20 pb-20 relative" ref={containerRef}>
       <Container>
-        <div className="sticky top-0 z-[60] bg-[#1E1E4B]/90 backdrop-blur-md py-6 mb-12 reveal reveal-fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#DBBE77]">
-            Our Business <br /> Domains & Services
+        <div className="sticky top-0 z-[60] bg-[#1E1E4B]/90 backdrop-blur-md py-6 mb-12">
+          <h2 className="flex flex-col m-0">
+            <ShinyText 
+              text="Our Business" 
+              speed={4} 
+              startDelay={0}
+              delay={3}
+              className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold" 
+              color="#DBBE77" 
+              shineColor="#FFF3D6" 
+              direction="left"
+              spread={90}
+            />
+            <ShinyText 
+              text="Domains & Services" 
+              speed={4} 
+              startDelay={3}
+              delay={0}
+              className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold" 
+              color="#DBBE77" 
+              shineColor="#FFF3D6" 
+              direction="left"
+              spread={90}
+            />
           </h2>
         </div>
+
+
+
 
         <div className="flex flex-col pb-[30vh]">
           {services.map((service, index) => (
@@ -210,7 +236,7 @@ const ServicesSection = () => {
                 {/* Card Content */}
                 <div className="relative w-full md:w-[58%] p-6 lg:p-10 flex flex-col justify-center">
                   {/* Large Background Number */}
-                  <div className="absolute top-4 right-8 text-7xl lg:text-[8rem] font-bold text-white/5 select-none pointer-events-none tracking-tighter">
+                  <div className="absolute top-4 right-4 text-7xl lg:text-[6rem] font-bold text-white/5 select-none pointer-events-none tracking-tighter">
                     {service.id}
                   </div>
 
@@ -245,12 +271,44 @@ const ServicesSection = () => {
                   </div>
 
                   {/* Decorative Pattern (Bottom Right) */}
-                  <div className="absolute bottom-4 right-4 w-24 h-24 opacity-20 pointer-events-none">
-                    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17.6675 87.7196H35.3048L30.8446 79.963C28.1264 75.2358 23.0894 72.322 17.6367 72.322H0L4.45923 80.0775C7.17708 84.8051 12.2144 87.7196 17.6675 87.7196Z" fill="#DBBE77" />
-                      <path d="M72.3223 17.6678V35.3048L80.0785 30.8445C84.8057 28.1263 87.7196 23.089 87.7196 17.6363V0L79.964 4.45886C75.2365 7.17707 72.3223 12.2148 72.3223 17.6678Z" fill="#DBBE77" />
+                  <div className="absolute bottom-0 right-0 w-32 h-32 opacity-90 pointer-events-none">
+
+                    <svg width="100%" height="100%" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                      <g opacity="0.639999">
+                        <g opacity="0.6">
+                          <path d="M17.6675 87.7196H35.3048L30.8446 79.963C28.1264 75.2358 23.0894 72.322 17.6367 72.322H0L4.45923 80.0775C7.17708 84.8051 12.2144 87.7196 17.6675 87.7196Z" fill="url(#paint0_linear_164_95)" />
+                          <path d="M19.4671 63.2735L35.7619 70.0231L34.6096 61.15C33.9071 55.7426 30.3687 51.1229 25.3307 49.0363L9.03662 42.287L10.1886 51.1587C10.8907 56.5664 14.4295 61.1869 19.4671 63.2735Z" fill="url(#paint1_linear_164_95)" />
+                          <path d="M42.9573 53.8456L45.2881 45.2072C46.7087 39.9423 45.2072 34.3201 41.3516 30.4645L28.8806 17.9935L26.5495 26.6309C25.1288 31.8958 26.6299 37.5183 30.4859 41.3742L42.9573 53.8456Z" fill="url(#paint2_linear_164_95)" />
+                          <path d="M55.7954 41.654L61.2545 34.5651C64.5813 30.2448 65.3458 24.476 63.2592 19.4383L56.5099 3.14425L51.0512 10.232C47.7237 14.5523 46.9588 20.3212 49.0457 25.3596L55.7954 41.654Z" fill="url(#paint3_linear_164_95)" />
+                          <path d="M72.3223 17.6678V35.3048L80.0785 30.8445C84.8057 28.1263 87.7196 23.089 87.7196 17.6363V0L79.964 4.45886C75.2365 7.17707 72.3223 12.2148 72.3223 17.6678Z" fill="url(#paint4_linear_164_95)" />
+                        </g>
+                      </g>
+                      <defs>
+                        <linearGradient id="paint0_linear_164_95" x1="-0.00015241" y1="80.0207" x2="35.3049" y2="80.0207" gradientUnits="userSpaceOnUse">
+                          <stop stopColor="#F4D976" />
+                          <stop offset="1" stopColor="#62481A" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_164_95" x1="9.03679" y1="56.155" x2="35.7618" y2="56.155" gradientUnits="userSpaceOnUse">
+                          <stop stopColor="#F4D976" />
+                          <stop offset="1" stopColor="#62481A" />
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_164_95" x1="26.023" y1="35.9196" x2="45.8145" y2="35.9196" gradientUnits="userSpaceOnUse">
+                          <stop stopColor="#F4D976" />
+                          <stop offset="1" stopColor="#62481A" />
+                        </linearGradient>
+                        <linearGradient id="paint3_linear_164_95" x1="47.8858" y1="22.3991" x2="64.4192" y2="22.3991" gradientUnits="userSpaceOnUse">
+                          <stop stopColor="#F4D976" />
+                          <stop offset="1" stopColor="#62481A" />
+                        </linearGradient>
+                        <linearGradient id="paint4_linear_164_95" x1="72.3222" y1="17.6523" x2="87.7197" y2="17.6523" gradientUnits="userSpaceOnUse">
+                          <stop stopColor="#F4D976" />
+                          <stop offset="1" stopColor="#62481A" />
+                        </linearGradient>
+                      </defs>
                     </svg>
                   </div>
+
                 </div>
               </div>
             </div>
